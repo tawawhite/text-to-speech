@@ -8,6 +8,53 @@
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
+        <div class="app">
+            <img src="img/speech.png" alt="Speech logo" />
+            <form class="form">
+                <div class="form-input">
+                    <textarea
+                        class="form__text"
+                        id="text-input"
+                        placeholder="Type anything..."
+                    ></textarea>
+                </div>
+
+                <div class="form-input">
+                    <label for="rate">Rate <span class="badge">1</span></label>
+                    <input
+                        type="range"
+                        id="rate"
+                        class="form__rate"
+                        min="0.5"
+                        max="2"
+                        value="1"
+                        step="0.1"
+                    />
+                </div>
+
+                <div class="form-input">
+                    <label for="pitch">Pitch <span class="badge">1</span></label>
+                    <input
+                        type="range"
+                        id="pitch"
+                        class="form__pitch"
+                        min="0"
+                        max="2"
+                        value="1"
+                        step="0.1"
+                    />
+                </div>
+
+                <div class="form-input">
+                    <select id="voice-select" class="form__voices"></select>
+                </div>
+
+                <div class="form-input">
+                    <button class="form__speak">Speak</button>
+                </div>
+            </form>
+        </div>
+
         <script src="script.js"></script>
     </body>
 </html>

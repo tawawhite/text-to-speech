@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+}
+
+.badge {
+    background-color: blue;
+    padding: 0.5rem;
+    display: inline-block;
+    border-radius: 10%;
+}
+
+.app {
+    width: 50%;
+}
+
+.app img {
+    margin: 2rem;
+}
+
+.form {
+    font-size: 1.6rem;
+}
+
+.form .form-input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.form .form__text {
+    width: 100%;
+    font-size: 1.6rem;
+    padding: 1rem 1.5rem;
+}
+
+.form .form__speak {
+    border: none;
+    font-size: inherit;
+    padding: 1rem 1.5rem;
+}
