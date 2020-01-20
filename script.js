@@ -1,6 +1,7 @@
 // Speech API.
 const speechApi = window.speechSynthesis;
 
+const body = document.querySelector("body");
 const textForm = document.querySelector("form");
 const textInput = document.querySelector("#text-input");
 const voiceSelect = document.querySelector("#voice-select");
@@ -39,9 +40,15 @@ function speak() {
         return;
     }
 
+    body.style.background = "#141414 url(./img/wave.gif)";
+    body.style.backgroundRepeat = "repeat-x";
+    body.style.backgroundSize = "100% 100%";
+
     const speakText = new SpeechSynthesisUtterance(textInput.value);
     speakText.onend = e => {
         console.log("Done speaking...");
+
+        body.style.background = "#141414";
     };
 
     speakText.onerror = e => {
